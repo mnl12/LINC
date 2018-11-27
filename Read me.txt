@@ -1,0 +1,1 @@
+To Run the algorithm, Run demo.m in each denosing and inpainting folders.

@@ -1,0 +1,14 @@
+function [Y,pos]=KNL(refpv,refpvn,Y1,Y1n,s,pos1,mc,mcov1)
+dis1=zeros(1,size(Y1,2));
+las=.6;
+=eig(
+for i=1:size(Y1,2)
+    dis(i)=((Y1(:,i)-Y1n(:,i))'*(Y1(:,i)-Y1n(:,i))+las*sigma^2*(Y1(:,i)-ym)'*(U*Si*U')*(Y1(:,i)-ym)+las*sigma^2*log(dets))*.000005;
+end
+
+       [dis indx2]=sort(dis);
+        Y2=Y2(:,indx2);
+        pos2=pos2(:,indx2);
+        Y=Y2(:,1:mc);
+        pos=pos2(:,1:mc);
+        
